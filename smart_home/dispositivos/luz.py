@@ -1,6 +1,14 @@
 from enum import Enum, auto
 from base import Dispositivo
 
+class Cor(Enum):
+    QUENTE = auto()
+    FRIA = auto()
+    NEUTRA = auto()
+
+class EstadoLuz(Enum):
+    ON = auto()
+    OFF = auto()
 
 class Luz(Dispositivo):
 
@@ -20,19 +28,11 @@ class Luz(Dispositivo):
         print(f'Desligando a {self.nome}.')
     
     def definir_brilho(self, novo_brilho: int):
-        self._brilho = novo_brilho
+        self.__brilho = novo_brilho
         print(f'Novo brilho aplicado')
     
-    def definir_cor(self, novo_brilho):
-        self.__brilho = novo_brilho
+    def definir_cor(self, nova_cor):
+        self.__brilho = nova_cor
         print('Novo brilho definico')
 
-    class Cor(Enum):
-        QUENTE = auto()
-        FRIA = auto()
-        NEUTRA = auto()
-
-    class EstadoLuz(Enum):
-        ON = auto()
-        OFF = auto()
         
