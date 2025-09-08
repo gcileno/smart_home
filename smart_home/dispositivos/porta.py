@@ -19,7 +19,16 @@ class Porta(Dispositivo):
     def __init__(self, nome, estado = EstadoPorta.TRANCADA):
         super().__init__(nome, estado)
         self.__tentativas_invalidas = 0
-    
+
+    @property
+    def estado(self):
+        return self.estado
+
+    @Dispositivo.estado.setter
+    def estado(self,valor):
+        if not isinstance(valor, EstadoPorta):
+            raise ValueError('Estado inválido para a porta, verifique suas opções.')
+        
     def aviso_trancar_aberta(self):
         self.__tentativas_invalidas += 1
         print("Não é possível trancar pois a porta está aberta!")

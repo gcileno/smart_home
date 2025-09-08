@@ -17,7 +17,7 @@ class Dispositivo(ABC):
         else:
             raise ValueError("Nome deve ser uma string não vazia.")
 
-    # --- estado (abstrato, deve ser implementado pela subclasse) ---
+    # --- estado deve ser instanciado pelas novas classes
     @property
     @abstractmethod
     def estado(self):

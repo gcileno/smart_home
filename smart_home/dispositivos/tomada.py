@@ -6,15 +6,16 @@ class EstadoTomada(Enum):
     ON = auto()
     OFF = auto()
 
-TRANSICOES = [
-    #{"trigger": "trancar", "source": EstadoPorta.DESTRANCADA, "dest": EstadoPorta.TRANCADA},
+TRANSICOES_TOMADA = [
+    {"trigger": "ligar", "source": EstadoTomada.OFF, "dest": EstadoTomada.ON},
+    {"trigger": "desligar", "source": EstadoTomada.ON, "dest": EstadoTomada.OFF},
 ]
 
 class Tomada(Dispositivo):
-    def __init__(self, nome, potencia_w: int, estado=EstadoTomada.OFF):
+    def __init__(self, nome, estado=EstadoTomada.OFF, potencia_w: int = 0):
         super().__init__(nome, estado)
 
-        # valida potência
+        # validar potência
         if not isinstance(potencia_w, int) or potencia_w < 0:
             raise ValueError("Potência deve ser um inteiro maior ou igual a 0.")
         self._potencia_w = potencia_w
