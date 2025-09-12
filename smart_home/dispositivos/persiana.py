@@ -45,5 +45,3 @@ class Persiana(Dispositivo):
             self._luminosidade = valor
         else:
             raise ValueError('Não é possivel alterar as paletas com a persina abert.')
-    
-

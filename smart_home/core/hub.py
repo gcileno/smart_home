@@ -1,3 +1,10 @@
+from observers import ConfigHub
 
-#o hub deve ser unico e um observer dos dicpositivos?
-#através do observer ele faŕa a inserção dos dados no arquivo logger
+class Hub(ConfigHub):
+    _instance = None
+
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        
+        return cls._instance
