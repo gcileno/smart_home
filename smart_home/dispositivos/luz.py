@@ -1,5 +1,5 @@
 from enum import Enum, auto
-from base import Dispositivo
+from smart_home.dispositivos.base import Dispositivo
 
 class CorLuz(Enum):
     QUENTE = auto()
@@ -31,7 +31,6 @@ class Luz(Dispositivo):
 
         #implementr classe NotNull ou ValueError?
 
-    @Dispositivo.estado.setter
     def estado(self, valor):
 
         if not isinstance(valor, EstadoLuz):
@@ -73,3 +72,6 @@ class Luz(Dispositivo):
 
         return False
         
+if __name__ == "__main__":
+    luz = Luz('Luz da sala', EstadoLuz.OFF, CorLuz.FRIA, brilho=40)
+    

@@ -3,6 +3,9 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 
+from smart_home.core.hub import Hub
+from smart_home.utils.criar import criar_dispositivo, menu_criar_dispositivo
+
 console = Console()
 
 class OpcoesMenuInicial(Enum):
@@ -60,7 +63,7 @@ def pegar_opcao() -> OpcoesMenuInicial:
         #console.print("[bold red]⚠ Opção inválida![/bold red]")
         return None
 
-def iniciar():
+def home(hub: Hub):
     esc = None
 
     while esc != OpcoesMenuInicial.SAIR:
@@ -70,6 +73,9 @@ def iniciar():
         match esc:
             case OpcoesMenuInicial.LISTAR:
                 print('Chamando função para listar os objetos')
+            case OpcoesMenuInicial.ADICIONAR:
+                d = menu_criar_dispositivo()
+                hub.adicionar_dispositivo(d)
             case _:
                 console.print("[bold red]⚠ Opção inválida![/bold red]")
 

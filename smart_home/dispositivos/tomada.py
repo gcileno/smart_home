@@ -1,6 +1,6 @@
 from datetime import datetime
 from enum import Enum, auto
-from base import Dispositivo
+from smart_home.dispositivos.base import Dispositivo
 
 class EstadoTomada(Enum):
     ON = auto()

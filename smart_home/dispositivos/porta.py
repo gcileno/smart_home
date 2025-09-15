@@ -1,5 +1,5 @@
 from enum import Enum, auto
-from base import Dispositivo
+from smart_home.dispositivos.base import Dispositivo
 
 class EstadoPorta(Enum):
     TRANCADA = auto()
@@ -24,7 +24,7 @@ class Porta(Dispositivo):
     def estado(self):
         return self.estado
 
-    @Dispositivo.estado.setter
+    @estado.setter
     def estado(self,valor):
         if not isinstance(valor, EstadoPorta):
             raise ValueError('Estado inválido para a porta, verifique suas opções.')

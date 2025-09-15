@@ -1,28 +1,52 @@
-class ConfigHub():
+import csv
 
-    def __init__(self):
-        pass
+class LogEventosHub:
+    _instance = None
 
-    def atualizar(self):
-        print('Atualizar arquivo log')
-    
-    def inicializar_hub(self):
-        print('Leitura do arquivo config.json para inicializar o hub')
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
 
-class LogEventosHub():
-    def __init__(self):
-        pass
+    def __init__(self, caminho = "smart_home/data/log.csv"):
+        self.log_caminho = caminho
 
-    def atualizar_log(self, **kawrgs):
-
-        with open('data/log.csv', 'a') as log:
-            log.write(kawrgs)
+    def update(self, **kwargs):
+        """
+        Recebe dados de notificação e grava no log CSV.
+        kwargs esperados: timestamp, dispositivo, evento, estado_origem, estado_destino
+        """
+        with open(self.log_caminho, mode="a", newline="", encoding="utf-8") as file:
+            writer = csv.writer(file)
+            writer.writerow([
+                kwargs.get("timestamp"),
+                kwargs.get("dispositivo"),
+                kwargs.get("evento"),
+                kwargs.get("estado_origem"),
+                kwargs.get("estado_destino")
+            ])
 
 class LogRelatoriosHub():
-    def __init__(self):
-        pass
+    _instance = None
 
-    def atualizar_log(self, **kawrgs):
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+    
+    def __init__(self, caminho = "smart_home/data/log.csv"):
+        self.log_caminho = caminho
 
-        with open('data/relatorio.csv', 'a') as log:
-            log.write(kawrgs)
+    def update(self, **kwargs):
+        """
+        Recebe dados de notificação e grava no log CSV.
+        kwargs esperados: id_dispositivo, total_wh, inicio_periodo, fim_periodo
+        """
+        with open(self.log_caminho, mode="a", newline="", encoding="utf-8") as file:
+            writer = csv.writer(file)
+            writer.writerow([
+                kwargs.get("id_dispositivo"),
+                kwargs.get("total_wh"),
+                kwargs.get("inicio_periodo"),
+                kwargs.get("fim_periodo"),
+            ])

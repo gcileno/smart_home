@@ -1,5 +1,5 @@
 from enum import Enum, auto
-from base import Dispositivo
+from smart_home.dispositivos.base import Dispositivo
 
 class LuminosidadePersiana(Enum):
     CLARO = auto()
@@ -26,7 +26,7 @@ class Persiana(Dispositivo):
     def estado(self):
         return self._nome
     
-    @Dispositivo.estado.setter
+    @estado.setter
     def estado(self, valor):
         if not isinstance(valor, EstadoPersiana):
             raise ValueError('Estado não encontrado para a perciana, reveja suas opções.')
