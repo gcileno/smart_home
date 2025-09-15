@@ -4,7 +4,8 @@ from rich.panel import Panel
 from rich.table import Table
 
 from smart_home.core.hub import Hub
-from smart_home.utils.criar import criar_dispositivo, menu_criar_dispositivo
+from smart_home.utils.criar import menu_criar_dispositivo
+from smart_home.utils.listar import listar_dispositivos
 
 console = Console()
 
@@ -72,7 +73,7 @@ def home(hub: Hub):
                 
         match esc:
             case OpcoesMenuInicial.LISTAR:
-                print('Chamando função para listar os objetos')
+                listar_dispositivos(hub.dispositivos)
             case OpcoesMenuInicial.ADICIONAR:
                 d = menu_criar_dispositivo()
                 hub.adicionar_dispositivo(d)
