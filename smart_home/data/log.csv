@@ -1,1 +1,5 @@
 timestamp,dispositivo,evento,estado_origem,estado_destino
+2025-09-15 16:34:18.205630,Luz da sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-15 16:39:31.205578,Luz da sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-15 16:40:43.661091,Luz da sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-15 16:40:43.662828,Luz da sala,desligar,EstadoLuz.ON,EstadoLuz.OFF

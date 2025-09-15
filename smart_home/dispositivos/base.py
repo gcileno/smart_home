@@ -3,7 +3,9 @@ from abc import ABC, abstractmethod
 class Dispositivo(ABC):
     def __init__(self, nome, estado):
         self.nome = nome
-        self.estado = estado  
+        self.estado = estado
+        self.machine = None
+        self.logger = None
         self._observadores = []
 
     # --- nome ---
@@ -40,8 +42,8 @@ class Dispositivo(ABC):
         if observador in self._observadores:
             self._observadores.remove(observador)
 
-    def notificar_observadores(self, evento: str, valor_antigo=None, valor_novo=None):
-        """Notifica todos os observadores sobre uma mudança."""
+    def notificar_observadores(self, **data):
+        print("""Iniciar a notificação aos observadores""")
         for obs in self._observadores:
-            if hasattr(obs, "update"):  
-                obs.update(self, evento, valor_antigo, valor_novo)  # se for objeto
+            if hasattr(obs, "update"): 
+                obs.update(**data)  # se for objeto

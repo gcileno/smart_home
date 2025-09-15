@@ -13,4 +13,5 @@ def main():
     
     interface.home(hub)
 
-main()
+if __name__ == "__main__":
+    main()

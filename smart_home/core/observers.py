@@ -16,6 +16,7 @@ class LogEventosHub:
         Recebe dados de notificação e grava no log CSV.
         kwargs esperados: timestamp, dispositivo, evento, estado_origem, estado_destino
         """
+        print("Notificação de alteração de um dispositivo chegou")
         with open(self.log_caminho, mode="a", newline="", encoding="utf-8") as file:
             writer = csv.writer(file)
             writer.writerow([
@@ -34,7 +35,7 @@ class LogRelatoriosHub():
             cls._instance = super().__new__(cls)
         return cls._instance
     
-    def __init__(self, caminho = "smart_home/data/log.csv"):
+    def __init__(self, caminho = "smart_home/data/relatorio.csv"):
         self.log_caminho = caminho
 
     def update(self, **kwargs):
