@@ -29,3 +29,19 @@ timestamp,dispositivo,evento,estado_origem,estado_destino
 2025-09-15 20:08:46.625854,Luz da sala,BRILHO ALTERADO,80,75
 2025-09-15 20:08:46.625854,Luz da sala,COR ALTERADA,CorLuz.NEUTRA,QUENTE
 2025-09-15 20:08:46.634951,Luz da sala,desligar,EstadoLuz.ON,EstadoLuz.OFF
+,Tomada da sala,LIGAR,EstadoTomada.OFF,
+,Tomada da sala,LIGAR,EstadoTomada.OFF,
+,Tomada de tv sala,LIGAR,EstadoTomada.OFF,
+2025-09-15 22:34:33.944040,Tomada de tv sala,ligar,EstadoTomada.OFF,EstadoTomada.ON
+,Tomada de tv sala,LIGAR,EstadoTomada.OFF,
+2025-09-15 22:36:03.131781,Tomada de tv sala,ligar,EstadoTomada.OFF,EstadoTomada.ON
+,Tomada de tv sala,LIGAR,EstadoTomada.OFF,
+2025-09-15 22:47:58.007631,Tomada de tv sala,ligar,EstadoTomada.OFF,EstadoTomada.ON
+,Tomada de tv sala,LIGAR,EstadoTomada.OFF,
+2025-09-15 22:51:14.508581,Tomada de tv sala,ligar,EstadoTomada.OFF,EstadoTomada.ON
+,Tomada de tv sala,LIGAR,EstadoTomada.OFF,
+2025-09-15 22:52:12.710521,Tomada de tv sala,ligar,EstadoTomada.ON,EstadoTomada.OFF
+,Tomada de tv sala,LIGAR,EstadoTomada.OFF,
+2025-09-15 22:52:59.560479,Tomada de tv sala,ligar,EstadoTomada.ON,EstadoTomada.OFF
+2025-09-15 22:53:45.596431,Tomada de tv sala,LIGAR,EstadoTomada.OFF,
+2025-09-15 22:53:45.600739,Tomada de tv sala,ligar,EstadoTomada.ON,EstadoTomada.OFF
