@@ -45,3 +45,11 @@ timestamp,dispositivo,evento,estado_origem,estado_destino
 2025-09-15 22:52:59.560479,Tomada de tv sala,ligar,EstadoTomada.ON,EstadoTomada.OFF
 2025-09-15 22:53:45.596431,Tomada de tv sala,LIGAR,EstadoTomada.OFF,
 2025-09-15 22:53:45.600739,Tomada de tv sala,ligar,EstadoTomada.ON,EstadoTomada.OFF
+2025-09-15 23:15:14.255903,Porta da Frente,destrancar,EstadoPorta.TRANCADA,EstadoPorta.DESTRANCADA
+2025-09-15 23:15:14.256904,Porta da Frente,abrir,EstadoPorta.DESTRANCADA,EstadoPorta.ABERTA
+2025-09-15 23:15:14.259909,Porta da Frente,trancar,EstadoPorta.ABERTA,EstadoPorta.ABERTA
+2025-09-15 23:16:35.464063,Porta da Frente,destrancar,EstadoPorta.TRANCADA,EstadoPorta.DESTRANCADA
+2025-09-15 23:16:35.479819,Porta da Frente,abrir,EstadoPorta.DESTRANCADA,EstadoPorta.ABERTA
+2025-09-15 23:16:35.479819,Porta da Frente,trancar,EstadoPorta.ABERTA,EstadoPorta.ABERTA
+2025-09-15 23:16:35.479819,Porta da Frente,fechar,EstadoPorta.ABERTA,EstadoPorta.DESTRANCADA
+2025-09-15 23:16:35.479819,Porta da Frente,trancar,EstadoPorta.DESTRANCADA,EstadoPorta.TRANCADA
