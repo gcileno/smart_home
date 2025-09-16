@@ -1,5 +1,6 @@
 from datetime import datetime
 from enum import Enum, auto
+from typing import Optional
 from transitions import Machine
 
 from smart_home.dispositivos.base import Dispositivo
@@ -44,6 +45,7 @@ class Luz(Dispositivo):
             send_event=True,
             after_state_change = "atualizar_log"
         )
+        self.atualizar_log()
 
     @property
     def estado(self):
@@ -61,9 +63,19 @@ class Luz(Dispositivo):
         return self._cor
 
     @cor.setter
-    def definir_cor(self, valor):
+    def definir_cor(self, valor: CorLuz):
         if not isinstance(valor, CorLuz):
             raise ValueError("Estado inválido: deve ser uma instância de EstadoTomada")
+        
+        self.logger.dispositivo = self.nome
+        self.logger.evento = 'COR ALTERADA'
+        self.logger.estado_origem = self._cor
+        self.logger.estado_destino = valor.name
+        self.logger.inicio_periodo = datetime.today()
+        self.logger.fim_periodo = datetime.today()
+        self.logger.total_wh = None
+        self.notificar_observadores(**self.logger.to_dict())
+    
         self._cor = valor
 
     @property
@@ -73,11 +85,21 @@ class Luz(Dispositivo):
     @brilho.setter
     def definir_brilho(self,valor):
 
-        if valor is None or valor.is_alpha:
+        if valor is None or valor.isalpha():
             raise ValueError('Digite um valor válido')
         
-        elif 0 < valor < 100:
+        elif 0 < int(valor) < 100:
+            self.logger.dispositivo = self.nome
+            self.logger.evento = 'BRILHO ALTERADO'
+            self.logger.estado_origem = self._brilho
+            self.logger.estado_destino = valor
+            self.logger.inicio_periodo = datetime.today()
+            self.logger.fim_periodo = datetime.today()
+            self.logger.total_wh = None
             self._brilho = valor
+            print(f'Brilho definido para {self._brilho}%')
+            self.notificar_observadores(**self.logger.to_dict())
+
         else:
             raise ValueError('Digite um valor entre 0 e 100.')
     
@@ -87,19 +109,19 @@ class Luz(Dispositivo):
 
         return False
 
-    def atualizar_log(self, event):
+    def atualizar_log(self, event: Optional[object] = None):
 
         self.logger = Logger(
 
             timestamp= datetime.today(),
             dispositivo= self.nome,
-            evento= event.event.name,
-            estado_origem= EstadoLuz[event.transition.source],
-            estado_destino= EstadoLuz[event.transition.dest],
+            evento= event.event.name if event else None,
+            estado_origem= EstadoLuz[event.transition.source] if event else None,
+            estado_destino= EstadoLuz[event.transition.dest] if event else None,
             id_dispositivo= self.nome,
-            total_wh= None,
-            inicio_periodo=None,
-            fim_periodo=None
+            total_wh= 12,
+            inicio_periodo=datetime.today(),
+            fim_periodo=datetime.today(),
         )
     
     def on_enter_ON(self, event):
@@ -116,4 +138,8 @@ if __name__ == "__main__":
     rel = LogRelatoriosHub()
     luz.adicionar_observador(eve, rel)
     luz.ligar()
+    luz.definir_brilho = '80'
+    luz.definir_cor = CorLuz.NEUTRA
+    luz.definir_brilho = '75'
+    luz.definir_cor = CorLuz.QUENTE
     luz.desligar()

@@ -7,8 +7,8 @@ class EstadoTomada(Enum):
     OFF = auto()
 
 TRANSICOES_TOMADA = [
-    {"trigger": "ligar", "source": EstadoTomada.OFF, "dest": EstadoTomada.ON},
-    {"trigger": "desligar", "source": EstadoTomada.ON, "dest": EstadoTomada.OFF},
+    {"trigger": "ligar", "source": EstadoTomada.OFF.name, "dest": EstadoTomada.ON.name},
+    {"trigger": "desligar", "source": EstadoTomada.ON.name, "dest": EstadoTomada.OFF.name},
 ]
 
 class Tomada(Dispositivo):
@@ -46,7 +46,7 @@ class Tomada(Dispositivo):
         return self._consumo_wh
 
     # --- estado ---
-    @Dispositivo.estado.setter
+    @estado.setter
     def estado(self, valor):
         if not isinstance(valor, EstadoTomada):
             raise ValueError("Estado inválido: deve ser uma instância de EstadoTomada")

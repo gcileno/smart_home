@@ -2,15 +2,15 @@ from dataclasses import asdict, dataclass
 
 @dataclass
 class Logger():
-    timestamp: str
-    dispositivo: str
-    evento: str
-    estado_origem: str
-    estado_destino: str
-    id_dispositivo: str
-    total_wh: str
-    inicio_periodo: str
-    fim_periodo: str
+    timestamp: str = None
+    dispositivo: str = None
+    evento: str = None
+    estado_origem: str = None
+    estado_destino: str = None
+    id_dispositivo: str = None
+    total_wh: str = None
+    inicio_periodo: str = None
+    fim_periodo: str = None
 
     def to_dict(self):
         return asdict(self)

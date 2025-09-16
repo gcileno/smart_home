@@ -3,3 +3,29 @@ timestamp,dispositivo,evento,estado_origem,estado_destino
 2025-09-15 16:39:31.205578,Luz da sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
 2025-09-15 16:40:43.661091,Luz da sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
 2025-09-15 16:40:43.662828,Luz da sala,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-15 19:46:30.054174,Luz da sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-15 19:46:30.054174,Luz da sala,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-15 19:50:17.800151,Luz da sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-15 19:51:10.248182,Luz da sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-15 19:51:26.699083,Luz da sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-15 19:51:48.921456,Luz da sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-15 19:51:48.922109,Luz da sala,BRILHO ALTERADO,40,80
+2025-09-15 19:51:48.924155,Luz da sala,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-15 19:55:02.361475,Luz da sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-15 19:55:02.361475,Luz da sala,BRILHO ALTERADO,40,80
+2025-09-15 19:55:02.361475,Luz da sala,COR ALTERADA,CorLuz.FRIA,NEUTRA
+2025-09-15 19:55:02.361475,Luz da sala,BRILHO ALTERADO,80,75
+2025-09-15 19:55:02.361475,Luz da sala,COR ALTERADA,CorLuz.NEUTRA,QUENTE
+2025-09-15 19:55:02.370855,Luz da sala,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-15 19:56:29.791195,Luz da sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-15 19:56:29.791195,Luz da sala,BRILHO ALTERADO,40,80
+2025-09-15 19:56:29.791195,Luz da sala,COR ALTERADA,CorLuz.FRIA,NEUTRA
+2025-09-15 19:56:29.791195,Luz da sala,BRILHO ALTERADO,80,75
+2025-09-15 19:56:29.791195,Luz da sala,COR ALTERADA,CorLuz.NEUTRA,QUENTE
+2025-09-15 19:56:29.791195,Luz da sala,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-15 20:08:46.624837,Luz da sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-15 20:08:46.625854,Luz da sala,BRILHO ALTERADO,40,80
+2025-09-15 20:08:46.625854,Luz da sala,COR ALTERADA,CorLuz.FRIA,NEUTRA
+2025-09-15 20:08:46.625854,Luz da sala,BRILHO ALTERADO,80,75
+2025-09-15 20:08:46.625854,Luz da sala,COR ALTERADA,CorLuz.NEUTRA,QUENTE
+2025-09-15 20:08:46.634951,Luz da sala,desligar,EstadoLuz.ON,EstadoLuz.OFF
