@@ -5,7 +5,6 @@ from transitions import Machine
 from smart_home.core.observers import LogEventosHub, LogRelatoriosHub
 from smart_home.core.logger import Logger
 from smart_home.dispositivos.base import Dispositivo
-from smart_home.dispositivos.luz import CorLuz
 
 class EstadoTomada(Enum):
     ON = auto()
