@@ -1,4 +1,8 @@
 from abc import ABC, abstractmethod
+from datetime import datetime, timedelta
+from typing import Optional
+
+from smart_home.core.logger import Logger
 
 class Dispositivo(ABC):
     def __init__(self, nome, estado):
@@ -33,14 +37,23 @@ class Dispositivo(ABC):
         """Define o estado do dispositivo (validado na subclasse)."""
         pass
 
+    def atualizar_log(self, event: Optional[object] = None):
+
+        self.logger = Logger (
+            timestamp = datetime.now().isoformat(),
+            dispositivo= self.nome,
+            id_dispositivo = self.nome,
+            evento = event.event.name if event else None,
+            estado_origem = event.transition.source if event else None,
+            estado_destino = event.transition.dest if event else None,
+            inicio_periodo = datetime.today(),
+            fim_periodo = datetime.combine(datetime.today(), datetime.min.time()) + timedelta(days=1),
+            total_wh = None
+        )
+
     # --- Observer ---
     def adicionar_observador(self, *observador):
         self._observadores.extend(observador)
-
-    def remover_observador(self, observador):
-        """Remove um observador registrado."""
-        if observador in self._observadores:
-            self._observadores.remove(observador)
 
     def notificar_observadores(self, **data):
         print("""Iniciar a notificação aos observadores""")
