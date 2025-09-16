@@ -33,7 +33,7 @@ TRANSITIONS = [
 class Aspirador(Dispositivo):
 
     def __init__(self, nome: str):
-        super().__init__(nome, estado=EstadoAspirador.DESLIGADO)
+        super().__init__(nome, estado=EstadoAspirador.DESLIGADO, tipo ='ASPIRADOR')
         self.bateria = 100 
         self.localizacao = "Base"
 

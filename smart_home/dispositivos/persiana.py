@@ -24,7 +24,7 @@ TRANSITIONS = [
 class Persiana(Dispositivo):
 
     def __init__(self, nome, estado=EstadoPersiana.FECHADA, luminosidade=LuminosidadePersiana.ESCURA):
-        super().__init__(nome, estado)
+        super().__init__(nome, estado, tipo = 'Persiana')
         self.luminosidade = luminosidade
 
         # Máquina de estados

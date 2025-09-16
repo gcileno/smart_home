@@ -21,7 +21,7 @@ TRANSICOES = [
 class Porta(Dispositivo):
 
     def __init__(self, nome, estado = EstadoPorta.TRANCADA):
-        super().__init__(nome, estado)
+        super().__init__(nome, estado, tipo = 'Porta')
         self.__tentativas_invalidas = 0
 
         self.machine = Machine(

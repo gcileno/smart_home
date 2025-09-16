@@ -18,7 +18,7 @@ TRANSICOES_TOMADA = [
 class Tomada(Dispositivo):
 
     def __init__(self, nome, estado=EstadoTomada.OFF, potencia_w: int = 0):
-        super().__init__(nome, estado)
+        super().__init__(nome, estado, tipo ='TOMADA')
 
         # validar potência
         if not isinstance(potencia_w, int) or potencia_w < 0:

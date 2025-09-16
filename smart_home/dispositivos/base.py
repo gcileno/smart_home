@@ -5,9 +5,10 @@ from typing import Optional
 from smart_home.core.logger import Logger
 
 class Dispositivo(ABC):
-    def __init__(self, nome, estado):
+    def __init__(self, nome, estado, tipo=None):
         self.nome = nome
         self.estado = estado
+        self.tipo = tipo
         self.machine = None
         self.logger = None
         self._observadores = []
@@ -56,7 +57,6 @@ class Dispositivo(ABC):
         self._observadores.extend(observador)
 
     def notificar_observadores(self, **data):
-        print("""Iniciar a notificação aos observadores""")
         for obs in self._observadores:
             if hasattr(obs, "update"): 
                 obs.update(**data)  # se for objeto

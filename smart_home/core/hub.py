@@ -1,4 +1,5 @@
 from smart_home.core.observers import LogEventosHub, LogRelatoriosHub
+from smart_home.core.rotinas import Rotina
 from smart_home.dispositivos.base import Dispositivo
 
 class Hub:
@@ -6,6 +7,7 @@ class Hub:
     def __init__(self):
         super().__init__()
         self.dispositivos : list[Dispositivo] = []
+        self.rotinas : list[Rotina] = []
         self.eventos = LogEventosHub()
         self.relatorios = LogRelatoriosHub()
     
@@ -15,6 +17,13 @@ class Hub:
 
         #Inserir na lista de dispositos do hub
         self.dispositivos.append(dispositivo)
+
+    def adicionar_rotina(self, rotina):
+        self.rotinas.append(rotina)
+        
+    def executar_rotina(self, rotina):
+        rotina[0].executar(self.dispositivos)
+
 
     def remover_dispositivo(self, dispositivo_id: Dispositivo):
         self.dispositivos = [d for d in self.dispositivos if d.nome != dispositivo_id]

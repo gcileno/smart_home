@@ -1,11 +1,14 @@
 from enum import Enum, auto
+import os
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 
 from smart_home.core.hub import Hub
 from smart_home.utils.criar import menu_criar_dispositivo
+from smart_home.utils.selecionar import selecionar_dipositivo, detalhes_dispositivos
 from smart_home.utils.listar import listar_dispositivos
+from smart_home.utils.remover import remover_dispositivo
 
 console = Console()
 
@@ -68,6 +71,7 @@ def home(hub: Hub):
     esc = None
 
     while esc != OpcoesMenuInicial.SAIR:
+        console.clear()
         menu()
         esc = pegar_opcao()
                 
@@ -77,6 +81,29 @@ def home(hub: Hub):
             case OpcoesMenuInicial.ADICIONAR:
                 d = menu_criar_dispositivo()
                 hub.adicionar_dispositivo(d)
+            case OpcoesMenuInicial.EXECUTAR_ROTINA:
+
+                os.system('cls' if os.name == 'nt' else 'clear')
+                if not hub.rotinas:
+                    console.print("[bold red]⚠ Nenhuma rotina disponível![/bold red]")
+                else:
+                    console.print("\n[bold green]Rotinas disponíveis:[/bold green]")
+                    for idx, rotina in enumerate(hub.rotinas, start=1):
+                        console.print(f"[bold cyan]{idx}.[/bold cyan] {rotina.nome}")
+                    escolha = console.input("[bold yellow]👉 Escolha uma rotina para executar:[/bold yellow] ")
+                    try:
+                        escolha_int = int(escolha)
+                        rotina_selecionada = hub.rotinas[escolha_int - 1]
+                        hub.executar_rotina([rotina_selecionada])
+                    except (ValueError, IndexError):
+                        console.print("[bold red]⚠ Opção inválida![/bold red]")
+                    
+                    console.input("\n[bold cyan] Pressione Enter para continuar... [/bold cyan]")
+
+            case OpcoesMenuInicial.MOSTRAR:
+                selecionar_dipositivo(hub)
+            case OpcoesMenuInicial.REMOVER:
+                remover_dispositivo(hub)
             case _:
                 console.print("[bold red]⚠ Opção inválida![/bold red]")
 

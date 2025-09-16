@@ -19,8 +19,8 @@ TRANSICOES_IRRIGADOR = [
     ]
 
 class Irrigador(Dispositivo):
-    def __init__(self, nome, estado):
-        super().__init__(nome, estado)
+    def __init__(self, nome, estado = EstadoIrrigador.OFF):
+        super().__init__(nome, estado, tipo = "Irrigador")
 
         self.machine = Machine(
             model=self,

@@ -33,7 +33,7 @@ TRANSICOES_LUZ= [
 class Luz(Dispositivo):
 
     def __init__(self, nome, estado = EstadoLuz.OFF, cor = CorLuz.QUENTE, brilho: int = 60):
-        super().__init__(nome, estado)
+        super().__init__(nome, estado, tipo = 'LUZ')
         self._brilho = brilho
         self._cor = cor
 

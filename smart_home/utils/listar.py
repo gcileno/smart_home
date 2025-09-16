@@ -15,7 +15,7 @@ def listar_dispositivos(dispositivos: list[Dispositivo]):
     if not dispositivos:
         console.print("[bold red]Nenhum dispositivo encontrado.[/bold red]")
         return
-
+    console.clear()
     table = Table(title="📡 Dispositivos disponíveis")
 
     table.add_column("ID", justify="center", style="cyan", no_wrap=True)
@@ -30,3 +30,4 @@ def listar_dispositivos(dispositivos: list[Dispositivo]):
         )
 
     console.print(table)
+    console.input("\n[bold cyan] Pressione Enter para continuar... [/bold cyan]")
