@@ -1,3 +1,16 @@
+# Smart Home
+Atividade avaliativa realizada por Gabriel Cileno de Medeiros Costa como parte da disciplina Orientação a Objetos em Python.
+
+### Apresentação
+
+<div align="left">
+
+[![Assista no YouTube](https://img.youtube.com/vi/J9W6YQoZdmU/0.jpg)](https://youtu.be/J9W6YQoZdmU)
+</div>
+
+- [Ver vídeo no YouTube](https://youtu.be/J9W6YQoZdmU)
+- [Ver vídeo no Google Drive](https://drive.google.com/file/d/1YBqUM7A1m_RmB4LrC4N6wcFuilNHIjDQ/view?usp=sharing)
+
 ## Instalação de Dependências
 
 Antes de instalar as dependências, recomenda-se criar e ativar um ambiente virtual (venv):
@@ -37,7 +50,7 @@ python main.py
 O sistema será iniciado e você poderá acompanhar as operações conforme implementado no código.
 
 <details>
-<summary><strong>Pasta <code>utils</code></strong></summary>
+<summary><strong>Utils <code>utils</code></strong></summary>
 
 A pasta `utils` contém funções auxiliares e módulos de apoio utilizados em diferentes partes do projeto. Cada arquivo dentro dessa pasta tem uma responsabilidade específica, como manipulação de dados, validações ou utilidades gerais para facilitar o desenvolvimento e manutenção do sistema.
 
@@ -49,5 +62,34 @@ A pasta `utils` contém funções auxiliares e módulos de apoio utilizados em d
 - **service.py**: Serviços para geração de arquivos de configuração e logs (JSON e CSV).
 
 - `__init__.py`: Torna a pasta um pacote Python.
+
+</details>
+
+<details>
+<summary><strong>Core <code>core</code></strong></summary>
+
+A pasta `core` reúne os componentes centrais da lógica do sistema, responsáveis pela orquestração dos dispositivos, rotinas e registro de eventos.
+
+- **hub.py**: Define a classe principal `Hub`, responsável por gerenciar os dispositivos, rotinas e observadores do sistema. Permite adicionar/remover dispositivos, executar rotinas e integra os logs de eventos e relatórios.
+- **logger.py**: Estrutura de dados para registro de eventos e relatórios, facilitando a serialização e manipulação das informações de log.
+- **observers.py**: Implementa os observadores do padrão Observer, responsáveis por registrar eventos e relatórios em arquivos CSV de forma centralizada e singleton.
+- **rotinas.py**: Define a classe `Rotina`, que representa um conjunto de ações automatizadas a serem executadas em dispositivos do sistema, permitindo a criação de cenários e automações personalizadas.
+
+</details>
+
+<details>
+<summary><strong>Dispositivos <code>dispositivos</code></strong></summary>
+
+A pasta `dispositivos` contém todas as classes que representam os dispositivos físicos ou virtuais controlados pelo sistema. Cada dispositivo implementa comportamentos e estados próprios, além de integrar-se ao padrão Observer para registro de eventos.
+
+- **base.py**: Classe abstrata base para todos os dispositivos. Define propriedades comuns, interface para estados, integração com logs e observadores.
+- **aspirador.py**: Implementa o dispositivo Aspirador, com máquina de estados para ligar, iniciar limpeza, retornar à base e carregar. Gerencia bateria e localização.
+- **irrigador.py**: Representa o dispositivo Irrigador, com estados para ligar, desligar e irrigar. Integração com logs e notificações de eventos.
+- **luz.py**: Dispositivo de iluminação, com controle de estado (ligado/desligado), cor e brilho. Permite alteração dinâmica e registro detalhado de eventos.
+- **persiana.py**: Controla persianas automáticas, com estados de aberta/fechada e ajuste de luminosidade. Notifica eventos de alteração de estado.
+- **porta.py**: Dispositivo de porta inteligente, com estados trancada, destrancada e aberta. Inclui lógica para tentativas inválidas de trancamento.
+- **tomada.py**: Representa tomadas inteligentes, com controle de estado, potência e cálculo de consumo energético. Registra eventos de uso e consumo.
+
+Cada classe de dispositivo herda de `base.py`, garantindo interface padronizada, integração com logs e suporte ao padrão Observer para monitoramento e automação.
 
 </details>

@@ -521,3 +521,150 @@ timestamp,dispositivo,evento,estado_origem,estado_destino
 2025-09-16 20:41:15.586159,Persiana da Sala,fechar,ABERTA,FECHADA
 2025-09-16 20:41:15.587366,Persiana do Quarto do Casal,fechar,ABERTA,FECHADA
 2025-09-16 20:41:15.587366,Persiana do Quarto das Crianças,fechar,ABERTA,FECHADA
+2025-09-16 21:05:05.584876,Porta da Entrada,destrancar,EstadoPorta.TRANCADA,EstadoPorta.DESTRANCADA
+2025-09-16 21:05:05.587883,Porta dos Fundos,destrancar,EstadoPorta.TRANCADA,EstadoPorta.DESTRANCADA
+2025-09-16 21:05:05.589879,Porta do Escritório,destrancar,EstadoPorta.TRANCADA,EstadoPorta.DESTRANCADA
+2025-09-16 21:05:05.592271,Luz da Sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:05:05.593293,Luz da Cozinha,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:05:05.594291,Luz do Quarto das Crianças,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:05:05.595344,Luz do Banheiro,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:05:05.596372,Luz do Quarto do Casal,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:05:05.597289,Tomada da TV,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:05:05.597289,Tomada do Computador,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:05:05.598289,Tomada do Carregador,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:05:05.599288,Tomada do Abajur,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:05:05.600285,Tomada do Ar Condicionado,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:05:05.601800,Tomada do Ventilador,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:05:05.602818,Tomada do Microondas,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:05:05.602818,Tomada da Geladeira,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:05:05.603817,Aspirador,LIGAR,EstadoTomada.OFF,
+2025-09-16T21:05:05.605316,Aspirador Dory,ligar,DESLIGADO,LIGADO
+2025-09-16T21:05:05.606321,Aspirador Dory,iniciar_limpeza,LIGADO,LIMPEZA
+2025-09-16T21:05:05.607316,Aspirador Dory,iniciar_limpeza,LIGADO,LIMPEZA
+2025-09-16T21:05:05.608320,Aspirador Dory,LIMPANDO SALA,LIMPEZA - BASE,LIMPEZA - SALA
+2025-09-16T21:05:05.609832,Aspirador Dory,LIMPANDO COZINHA,LIMPEZA - BASE,LIMPEZA - COZINHA
+2025-09-16T21:05:05.610851,Aspirador Dory,LIMPANDO QUARTO,LIMPEZA - BASE,LIMPEZA - QUARTO
+2025-09-16T21:05:05.612366,Aspirador Dory,LIMPANDO BANHEIRO,LIMPEZA - BASE,LIMPEZA - BANHEIRO
+2025-09-16T21:05:05.614128,Aspirador Dory,LIMPANDO ESCRITORIO,LIMPEZA - BASE,LIMPEZA - ESCRITORIO
+2025-09-16T21:05:05.616151,Aspirador Dory,LIMPANDO BASE,LIMPEZA - BASE,LIMPEZA - BASE
+2025-09-16T21:05:05.618144,Aspirador Dory,iniciar_carregamento,RETORNANDO_BASE,CARREGANDO
+2025-09-16T21:05:05.620183,Aspirador Dory,carga_completa,CARREGANDO,LIGADO
+,,,,
+2025-09-16T21:05:05.624200,Aspirador Dory,desligar,LIGADO,DESLIGADO
+2025-09-16T21:05:05.626214,Irrigador do Jardim,ligar,OFF,ON
+2025-09-16T21:05:05.628220,Irrigador do Jardim,iniciar_irrigacao,ON,IRRIGANDO
+2025-09-16T21:05:05.630218,Irrigador do Jardim,parar_irrigacao,IRRIGANDO,ON
+2025-09-16T21:05:05.631214,Irrigador do Jardim,parar_irrigacao,IRRIGANDO,ON
+2025-09-16T21:05:05.632730,Irrigador do Jardim,desligar,ON,OFF
+2025-09-16 21:05:05.636256,Persiana da Sala,abrir,FECHADA,ABERTA
+2025-09-16 21:05:05.637252,Persiana do Quarto do Casal,abrir,FECHADA,ABERTA
+2025-09-16 21:05:05.638266,Persiana do Quarto das Crianças,abrir,FECHADA,ABERTA
+2025-09-16 21:05:19.374692,Porta da Entrada,trancar,EstadoPorta.DESTRANCADA,EstadoPorta.TRANCADA
+2025-09-16 21:05:19.376814,Porta dos Fundos,trancar,EstadoPorta.DESTRANCADA,EstadoPorta.TRANCADA
+2025-09-16 21:05:19.378694,Porta do Escritório,trancar,EstadoPorta.DESTRANCADA,EstadoPorta.TRANCADA
+2025-09-16 21:05:19.379687,Luz da Sala,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:05:19.379687,Luz da Cozinha,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:05:19.380688,Luz do Quarto das Crianças,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:05:19.380688,Luz do Banheiro,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:05:19.381687,Luz do Quarto do Casal,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:05:19.382688,Persiana da Sala,fechar,ABERTA,FECHADA
+2025-09-16 21:05:19.384493,Persiana do Quarto do Casal,fechar,ABERTA,FECHADA
+2025-09-16 21:05:19.385513,Persiana do Quarto das Crianças,fechar,ABERTA,FECHADA
+2025-09-16 21:12:10.769830,Porta da Entrada,destrancar,EstadoPorta.TRANCADA,EstadoPorta.DESTRANCADA
+2025-09-16 21:12:10.770821,Porta dos Fundos,destrancar,EstadoPorta.TRANCADA,EstadoPorta.DESTRANCADA
+2025-09-16 21:12:10.772821,Porta do Escritório,destrancar,EstadoPorta.TRANCADA,EstadoPorta.DESTRANCADA
+2025-09-16 21:12:10.773821,Luz da Sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:12:10.774820,Luz da Cozinha,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:12:10.774820,Luz do Quarto das Crianças,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:12:10.776767,Luz do Banheiro,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:12:10.776767,Luz do Quarto do Casal,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:12:10.778847,Tomada da TV,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:12:10.779830,Tomada do Computador,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:12:10.779830,Tomada do Carregador,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:12:10.780842,Tomada do Abajur,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:12:10.780842,Tomada do Ar Condicionado,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:12:10.782166,Tomada do Ventilador,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:12:10.782166,Tomada do Microondas,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:12:10.783162,Tomada da Geladeira,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:12:10.784161,Aspirador,LIGAR,EstadoTomada.OFF,
+2025-09-16T21:12:10.785170,Aspirador Dory,ligar,DESLIGADO,LIGADO
+2025-09-16T21:12:10.786173,Aspirador Dory,iniciar_limpeza,LIGADO,LIMPEZA
+2025-09-16T21:12:10.788161,Aspirador Dory,iniciar_limpeza,LIGADO,LIMPEZA
+2025-09-16T21:12:10.789159,Aspirador Dory,LIMPANDO SALA,LIMPEZA - BASE,LIMPEZA - SALA
+2025-09-16T21:12:10.790167,Aspirador Dory,LIMPANDO COZINHA,LIMPEZA - BASE,LIMPEZA - COZINHA
+2025-09-16T21:12:10.791176,Aspirador Dory,LIMPANDO QUARTO,LIMPEZA - BASE,LIMPEZA - QUARTO
+2025-09-16T21:12:10.793162,Aspirador Dory,LIMPANDO BANHEIRO,LIMPEZA - BASE,LIMPEZA - BANHEIRO
+2025-09-16T21:12:10.794682,Aspirador Dory,LIMPANDO ESCRITORIO,LIMPEZA - BASE,LIMPEZA - ESCRITORIO
+2025-09-16T21:12:10.795707,Aspirador Dory,LIMPANDO BASE,LIMPEZA - BASE,LIMPEZA - BASE
+2025-09-16T21:12:10.798720,Aspirador Dory,iniciar_carregamento,RETORNANDO_BASE,CARREGANDO
+2025-09-16T21:12:10.799725,Aspirador Dory,carga_completa,CARREGANDO,LIGADO
+,,,,
+2025-09-16T21:12:10.801722,Aspirador Dory,desligar,LIGADO,DESLIGADO
+2025-09-16T21:12:10.805230,Irrigador do Jardim,ligar,OFF,ON
+2025-09-16T21:12:10.808262,Irrigador do Jardim,iniciar_irrigacao,ON,IRRIGANDO
+2025-09-16T21:12:10.811250,Irrigador do Jardim,parar_irrigacao,IRRIGANDO,ON
+2025-09-16T21:12:10.815783,Irrigador do Jardim,parar_irrigacao,IRRIGANDO,ON
+2025-09-16T21:12:10.819789,Irrigador do Jardim,desligar,ON,OFF
+2025-09-16 21:12:10.824801,Persiana da Sala,abrir,FECHADA,ABERTA
+2025-09-16 21:12:10.829799,Persiana do Quarto do Casal,abrir,FECHADA,ABERTA
+2025-09-16 21:12:10.833798,Persiana do Quarto das Crianças,abrir,FECHADA,ABERTA
+2025-09-16 21:12:21.825918,Porta da Entrada,trancar,EstadoPorta.DESTRANCADA,EstadoPorta.TRANCADA
+2025-09-16 21:12:21.826921,Porta dos Fundos,trancar,EstadoPorta.DESTRANCADA,EstadoPorta.TRANCADA
+2025-09-16 21:12:21.827917,Porta do Escritório,trancar,EstadoPorta.DESTRANCADA,EstadoPorta.TRANCADA
+2025-09-16 21:12:21.829503,Luz da Sala,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:12:21.830511,Luz da Cozinha,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:12:21.830511,Luz do Quarto das Crianças,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:12:21.831517,Luz do Banheiro,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:12:21.831517,Luz do Quarto do Casal,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:12:21.832531,Persiana da Sala,fechar,ABERTA,FECHADA
+2025-09-16 21:12:21.833744,Persiana do Quarto do Casal,fechar,ABERTA,FECHADA
+2025-09-16 21:12:21.834839,Persiana do Quarto das Crianças,fechar,ABERTA,FECHADA
+2025-09-16 21:18:49.792739,Porta da Entrada,destrancar,EstadoPorta.TRANCADA,EstadoPorta.DESTRANCADA
+2025-09-16 21:18:49.794738,Porta dos Fundos,destrancar,EstadoPorta.TRANCADA,EstadoPorta.DESTRANCADA
+2025-09-16 21:18:49.796738,Porta do Escritório,destrancar,EstadoPorta.TRANCADA,EstadoPorta.DESTRANCADA
+2025-09-16 21:18:49.797744,Luz da Sala,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:18:49.799750,Luz da Cozinha,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:18:49.800738,Luz do Quarto das Crianças,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:18:49.801744,Luz do Banheiro,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:18:49.803762,Luz do Quarto do Casal,ligar,EstadoLuz.OFF,EstadoLuz.ON
+2025-09-16 21:18:49.804759,Tomada da TV,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:18:49.805773,Tomada do Computador,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:18:49.806761,Tomada do Carregador,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:18:49.806761,Tomada do Abajur,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:18:49.807884,Tomada do Ar Condicionado,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:18:49.807884,Tomada do Ventilador,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:18:49.809190,Tomada do Microondas,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:18:49.810129,Tomada da Geladeira,LIGAR,EstadoTomada.OFF,
+2025-09-16 21:18:49.810129,Aspirador,LIGAR,EstadoTomada.OFF,
+2025-09-16T21:18:49.811136,Aspirador Dory,ligar,DESLIGADO,LIGADO
+2025-09-16T21:18:49.813155,Aspirador Dory,iniciar_limpeza,LIGADO,LIMPEZA
+2025-09-16T21:18:49.814126,Aspirador Dory,iniciar_limpeza,LIGADO,LIMPEZA
+2025-09-16T21:18:49.816133,Aspirador Dory,LIMPANDO SALA,LIMPEZA - BASE,LIMPEZA - SALA
+2025-09-16T21:18:49.817218,Aspirador Dory,LIMPANDO COZINHA,LIMPEZA - BASE,LIMPEZA - COZINHA
+2025-09-16T21:18:49.819129,Aspirador Dory,LIMPANDO QUARTO,LIMPEZA - BASE,LIMPEZA - QUARTO
+2025-09-16T21:18:49.820132,Aspirador Dory,LIMPANDO BANHEIRO,LIMPEZA - BASE,LIMPEZA - BANHEIRO
+2025-09-16T21:18:49.822126,Aspirador Dory,LIMPANDO ESCRITORIO,LIMPEZA - BASE,LIMPEZA - ESCRITORIO
+2025-09-16T21:18:49.824131,Aspirador Dory,LIMPANDO BASE,LIMPEZA - BASE,LIMPEZA - BASE
+2025-09-16T21:18:49.826131,Aspirador Dory,iniciar_carregamento,RETORNANDO_BASE,CARREGANDO
+2025-09-16T21:18:49.827133,Aspirador Dory,carga_completa,CARREGANDO,LIGADO
+,,,,
+2025-09-16T21:18:49.829131,Aspirador Dory,desligar,LIGADO,DESLIGADO
+2025-09-16T21:18:49.831146,Irrigador do Jardim,ligar,OFF,ON
+2025-09-16T21:18:49.833147,Irrigador do Jardim,iniciar_irrigacao,ON,IRRIGANDO
+2025-09-16T21:18:49.835148,Irrigador do Jardim,parar_irrigacao,IRRIGANDO,ON
+2025-09-16T21:18:49.837146,Irrigador do Jardim,parar_irrigacao,IRRIGANDO,ON
+2025-09-16T21:18:49.841164,Irrigador do Jardim,desligar,ON,OFF
+2025-09-16 21:18:49.844166,Persiana da Sala,abrir,FECHADA,ABERTA
+2025-09-16 21:18:49.846162,Persiana do Quarto do Casal,abrir,FECHADA,ABERTA
+2025-09-16 21:18:49.848165,Persiana do Quarto das Crianças,abrir,FECHADA,ABERTA
+2025-09-16 21:19:01.259132,Porta da Entrada,trancar,EstadoPorta.DESTRANCADA,EstadoPorta.TRANCADA
+2025-09-16 21:19:01.263119,Porta dos Fundos,trancar,EstadoPorta.DESTRANCADA,EstadoPorta.TRANCADA
+2025-09-16 21:19:01.264120,Porta do Escritório,trancar,EstadoPorta.DESTRANCADA,EstadoPorta.TRANCADA
+2025-09-16 21:19:01.265129,Luz da Sala,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:19:01.266150,Luz da Cozinha,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:19:01.266150,Luz do Quarto das Crianças,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:19:01.267128,Luz do Banheiro,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:19:01.267128,Luz do Quarto do Casal,desligar,EstadoLuz.ON,EstadoLuz.OFF
+2025-09-16 21:19:01.268641,Persiana da Sala,fechar,ABERTA,FECHADA
+2025-09-16 21:19:01.270658,Persiana do Quarto do Casal,fechar,ABERTA,FECHADA
+2025-09-16 21:19:01.271652,Persiana do Quarto das Crianças,fechar,ABERTA,FECHADA
